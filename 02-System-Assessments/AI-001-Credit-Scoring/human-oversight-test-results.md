@@ -82,3 +82,47 @@ The proposed response is consistent with the expected oversight control. Operati
 - **Production approval:** Not granted by this exercise.
 
 **Conclusion:** The walkthrough demonstrates understanding of the challenge and escalation process. It does not establish that the operational control is effective or that remediation can be closed.
+
+# HOV-03 — Synthetic Walkthrough Record
+
+## Test Information
+
+- **Test ID:** HOV-03
+- **System:** AI-001 Credit Scoring System
+- **Scenario:** Escalation submitted but acknowledgement not received
+- **Exercise Type:** Synthetic tabletop walkthrough
+- **Operational Test Status:** Not run
+- **Exercise Assessment:** Expected response identified
+- **Evidence Type:** Training exercise; no live system evidence supplied
+
+## Scenario
+
+A reviewer submits an escalation to the senior credit-risk owner concerning an unresolved AI-generated credit score. The case-management system records submission, but no acknowledgement is received within the proposed four-business-hour target.
+
+## Expected Response
+
+The responsible process owner verifies delivery and follows the approved backup escalation route if acknowledgement remains absent. The case stays subject to required safeguards until an authorised next step is determined.
+
+## Evidence Required for Operational Execution
+
+1. Case reference and reason for escalation.
+2. Submission timestamp and communication or case-management reference.
+3. Designated recipient and evidence of delivery, where available.
+4. Acknowledgement status and timestamp, or evidence that acknowledgement was absent at the deadline.
+5. Backup escalation recipient, timestamp, and confirmation of ownership.
+6. Case status, actions taken, resolution or next-step decision, and audit-trail references.
+7. Customer communication record where required by the approved process.
+
+## Acceptance Assessment
+
+The proposed response aligns with the expected control design. Operational effectiveness remains unverified because no execution evidence has been supplied.
+
+## Result and Follow-up
+
+- **Operational result:** Not run.
+- **Exercise result:** Expected response identified.
+- **Defects:** Not assessed through operational testing.
+- **Next action:** Execute HOV-03 in an approved test environment and verify delivery tracking, deadline monitoring, backup escalation, ownership, and recordkeeping.
+- **Production approval:** Not granted by this exercise.
+
+**Conclusion:** This walkthrough demonstrates understanding of escalation traceability. It does not establish operational effectiveness or justify closing remediation.
