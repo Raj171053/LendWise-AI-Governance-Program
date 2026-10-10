@@ -173,3 +173,47 @@ Operational effectiveness remains unverified because no execution evidence has b
 - **Production approval:** Not granted by this exercise.
 
 **Conclusion:** The walkthrough demonstrates understanding of fallback and incident escalation. It does not establish that the operational control is effective or justify closing remediation.
+
+# HOV-05 — Synthetic Walkthrough Record
+
+## Test Information
+
+- **Test ID:** HOV-05
+- **System:** AI-001 Credit Scoring System
+- **Scenario:** Audit-trail failure during human review
+- **Exercise Type:** Synthetic tabletop walkthrough
+- **Operational Test Status:** Not run
+- **Exercise Assessment:** Expected response identified
+- **Evidence Type:** Training exercise; no live system evidence supplied
+
+## Scenario
+
+A reviewer challenges an AI-generated credit-risk score and escalates the case appropriately. However, a logging failure prevents the system from recording the reviewer's rationale and subsequent action history.
+
+## Expected Response
+
+The reviewer follows the approved logging-failure procedure. An authorised alternative record is used if the procedure permits it, and actions requiring unavailable audit evidence remain subject to the appropriate safeguards. Once logging is restored, required records are reconciled and discrepancies are investigated.
+
+## Evidence Required for Operational Execution
+
+1. Synthetic case reference and incident reference.
+2. Failure timestamp, affected functions, and investigation of the scope of missing records.
+3. Reviewer identity or authorised role, rationale, actions, and escalation details.
+4. Evidence that any alternative record was authorised, protected against unauthorised changes, and accessible only to authorised personnel.
+5. Logging restoration timestamp and evidence that the service is functioning correctly.
+6. Reconciliation of relevant actions during the failure period, including investigation of missing, duplicated, or inconsistent records.
+7. Documented disposition of discrepancies and evidence that required safeguards operated throughout the incident.
+
+## Acceptance Assessment
+
+The proposed response aligns with the expected control design. Operational effectiveness remains unverified because no execution evidence has been supplied.
+
+## Result and Follow-up
+
+- **Operational result:** Not run.
+- **Exercise result:** Expected response identified.
+- **Defects:** Not assessed through operational testing.
+- **Next action:** Execute HOV-05 in an approved test environment using synthetic records. Simulate the logging failure, verify the approved fallback, restore logging, and test reconciliation and record integrity.
+- **Production approval:** Not granted by this exercise.
+
+**Conclusion:** The walkthrough demonstrates understanding of audit-trail resilience. It does not establish that the operational control is effective or justify closing remediation.
