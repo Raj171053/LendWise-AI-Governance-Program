@@ -126,3 +126,50 @@ The proposed response aligns with the expected control design. Operational effec
 - **Production approval:** Not granted by this exercise.
 
 **Conclusion:** This walkthrough demonstrates understanding of escalation traceability. It does not establish operational effectiveness or justify closing remediation.
+
+# HOV-04 — Synthetic Walkthrough Record
+
+## Test Information
+
+- **Test ID:** HOV-04
+- **System:** AI-001 Credit Scoring System
+- **Scenario:** Supporting evidence unavailable because of an integration failure
+- **Exercise Type:** Synthetic tabletop walkthrough
+- **Operational Test Status:** Not run
+- **Exercise Assessment:** Expected response identified
+- **Evidence Type:** Training exercise; no live system evidence supplied
+
+## Scenario
+
+A reviewer can access the AI-generated credit-risk score but cannot access the explanation and supporting financial-data fields because of a simulated system integration failure. The normal review process requires those fields to be examined.
+
+## Expected Response
+
+The reviewer follows the approved hold or fallback procedure, records the failure, and escalates the issue. The case remains subject to required safeguards until an authorised next step is determined. If the relevant deadline is exceeded, the defined deadline-breach escalation is triggered.
+
+## Evidence Required for Operational Execution
+
+1. Affected synthetic case references and failure timestamps.
+2. Failed integration component, error details, and affected data fields.
+3. Incident reference, incident owner, and investigation of the number of affected cases.
+4. Actions taken to prevent unsupported decisions while evidence is unavailable.
+5. Escalation recipient, acknowledgement, target deadline, and any deadline breach.
+6. Recovery procedure, restoration timestamps, and evidence that the restored data is complete and accessible.
+7. Confirmation that the reviewer reassessed the case using the recovered evidence.
+8. Documented next-step decision, outcome, and audit-trail references.
+
+## Acceptance Assessment
+
+The proposed response is consistent with the expected control design. The walkthrough also identifies the need to distinguish service restoration from successful recovery of the evidence required for credit review.
+
+Operational effectiveness remains unverified because no execution evidence has been supplied.
+
+## Result and Follow-up
+
+- **Operational result:** Not run.
+- **Exercise result:** Expected response identified.
+- **Defects:** Not assessed through operational testing.
+- **Next action:** Execute HOV-04 in an approved test environment using synthetic records. Test the failure, deadline-breach escalation, recovery, and controlled resumption of review.
+- **Production approval:** Not granted by this exercise.
+
+**Conclusion:** The walkthrough demonstrates understanding of fallback and incident escalation. It does not establish that the operational control is effective or justify closing remediation.
