@@ -456,3 +456,31 @@ F-004 must not be closed until required controls are implemented, the relevant t
 **Independent Review:** Pending.
 
 **Closure Note:** RAT-03 may be marked Pass if the evidence confirms that the challenge was properly recorded and all required workflow steps were followed. If a required step was omitted, assess and record the resulting control failure.
+
+### RAT-04 — Approval Authority and Decision Routing
+
+**Control Objective:** Ensure reviewers cannot approve exceptions outside their delegated authority and that cases are routed to the appropriate authorised decision-maker.
+
+**Expected Result:** Approval is prevented and the case is routed to the authorised decision-maker.
+
+**Reported Actual Result:** A reviewer attempted to approve an exception outside their delegated authority. The case was routed to the correct authorised decision-maker. Logs, timestamps and SLA information were recorded.
+
+**Evidence References:**
+- Reviewer role and delegated-authority configuration: Reference to be recorded.
+- Exception case record: Reference to be recorded.
+- System response and routing record: Reference to be recorded.
+- Audit logs and event/correlation IDs: Reference to be recorded.
+- Timestamps and SLA record: Reference to be recorded.
+- Final authorised decision and persisted case state: Reference to be recorded.
+
+**Evidence Assessment:** The reported behaviour is consistent with the expected control. Verify that the unauthorised reviewer could not approve the exception, that the receiving decision-maker had the appropriate authority, and that routing, timestamps and SLA records are complete and retrievable.
+
+**Provisional Test Status:** Pass — pending evidence verification.
+
+**Defect and Remediation:** No defect reported in the supplied observation. This does not establish that no defect exists outside the tested scope.
+
+**Retest Result:** Not applicable unless a defect is identified or retesting is otherwise required.
+
+**Independent Review:** Pending.
+
+**Closure Note:** RAT-04 may be treated as passed after the supporting evidence confirms that the authority boundary was enforced and the case was routed and recorded correctly.
