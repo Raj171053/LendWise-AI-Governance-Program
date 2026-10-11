@@ -368,6 +368,34 @@ For each failed or inconclusive test, record:
 
 The expected outcomes for RAT-01 through RAT-05 have been documented. Final outcomes and evidence have not yet been established in this record. RAT-06 acceptance criteria must also be confirmed against the approved test plan.
 
+### RAT-01 — Role-Based Access and Permitted Actions
+
+**Control Objective:** Ensure reviewers can access only the information and actions permitted by their assigned roles.
+
+**Expected Result:** Reviewer can access only the information and actions permitted by their role.
+
+**Reported Actual Result:** Permitted actions worked and unauthorised actions were blocked.
+
+**Evidence References:**
+- Permission configuration/log: Reference to be recorded.
+- Test result report: Reference to be recorded.
+- System action responses: Reference to be recorded.
+- Backend and security logs: Reference to be recorded.
+- Exact attempted actions: Reference to be recorded.
+- Persisted-state verification: Reference to be recorded.
+
+**Evidence Assessment:** The reported observation is consistent with the expected result. The test evidence must be reviewed to confirm the tested role, exact attempted actions, application and backend enforcement, persisted state, and required security logging.
+
+**Provisional Test Status:** Pass — pending evidence verification.
+
+**Defect and Remediation:** No defect reported in the supplied observation. This does not establish that no defect exists outside the tested scope.
+
+**Retest Result:** Not applicable unless a defect is identified or retesting is otherwise required.
+
+**Independent Review:** Pending.
+
+**Closure Note:** RAT-01 may be treated as passed only after the supporting evidence is available, traceable and sufficient to demonstrate that the acceptance criteria were met.
+
 **F-004 Closure Decision:** Open — Remediation Required.
 
 F-004 must not be closed until required controls are implemented, the relevant tests are executed and evidenced, defects are addressed or formally risk-accepted by an authorised decision-maker, and an independent review supports the closure decision.
