@@ -484,3 +484,31 @@ F-004 must not be closed until required controls are implemented, the relevant t
 **Independent Review:** Pending.
 
 **Closure Note:** RAT-04 may be treated as passed after the supporting evidence confirms that the authority boundary was enforced and the case was routed and recorded correctly.
+
+### RAT-05 — Unauthorised Audit-Record Modification
+
+**Test objective:** Verify that unauthorised modification or bypass of an audit record associated with an override is prevented or detected, and that the relevant event history remains preserved.
+
+**Test scenario:** A reviewer attempts to modify or bypass the audit record associated with an override without the required authority.
+
+**Expected result:** Unauthorised modification is prevented or detected, and the audit trail preserves the relevant event history.
+
+**Reported observation:** The unauthorised modification was prevented or detected, and the relevant audit history was preserved.
+
+**Evidence reported:**
+- Access-control configuration
+- Audit logs
+- Integrity-check results
+
+**Provisional result:** Pass — evidence verification pending.
+
+**Evidence verification required:**
+1. Confirm the original override audit record remained intact.
+2. Verify the access-control configuration prevents the unauthorised action through the relevant application and API paths.
+3. Confirm the attempted modification or bypass generated the required audit or security event.
+4. Verify integrity-check results demonstrate that the relevant audit history was not altered or deleted.
+5. Record exact evidence references, test timestamp, test environment, and any defects.
+
+**Limitation:** This is a reported training-test outcome. The result must not be treated as independently verified operational evidence until the underlying records have been reviewed.
+
+**Closure status:** RAT-05 does not independently establish that F-004 is closed. The overall finding remains open pending completion and verification of all required tests and independent review.
