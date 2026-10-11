@@ -110,3 +110,14 @@ SEA-02 — Initial Test Assessment
 - **Investigation:** Determine whether the cause was capacity, routing configuration, unavailable staff, a technical failure or another factor.
 - **Status:** Not run.
 - **Production implication:** F004-02 remains open until the assignment and escalation controls are implemented and tested.
+
+### SEA-03 — Prioritisation of Unassigned Challenges
+
+**Decision principle:** Prioritisation considers potential customer harm, decision urgency, uncertainty, SLA breaches and existing safeguards.
+
+- Case C requires immediate triage because the assignment SLA has been breached and potential impact is unknown.
+- Case A requires urgent assessment because potentially incorrect income data may affect a pending lending decision.
+- Case B may receive lower immediate priority because the decision is paused and the discrepancy appears minor, subject to confirmation and a defined resolution deadline.
+- Initial triage and owner assignment should occur promptly across cases; substantive investigation should be prioritised by assessed risk and urgency.
+- The rationale, assigned owner, escalation actions, customer impact assessment and final disposition must be recorded.
+- These are proposed governance actions, not evidence of an implemented or tested LendWise workflow.
