@@ -124,3 +124,30 @@ Use synthetic cases and fictitious identifiers. Do not commit real customer info
 - **Status:** Open — operational failure not yet confirmed by an executed test.
 - **Closure decision:** Open.
 - **Production gate:** F004-03 remains unresolved until the applicable escalation controls are implemented and their effectiveness is evidenced.
+
+### EOM-02 — Queue Saturation and Reassignment
+
+**Scenario:** The designated backup reviewer acknowledges an escalated credit challenge but cannot accept it because their workload has exceeded the approved capacity threshold.
+
+**Expected result:** The workflow identifies the capacity constraint, routes the case to another eligible reviewer or authorised escalation owner, and records an acknowledged transfer of responsibility. The case remains in the approved controlled state until the challenge is resolved.
+
+**Evidence required:**
+- Synthetic case and challenge IDs
+- Queue capacity threshold and relevant queue state
+- Initial alert, delivery and acknowledgement timestamps
+- Reassignment trigger and routing outcome
+- Receiving reviewer identity, role and acceptance timestamp
+- Case ownership and status history
+- Escalation events if reassignment fails
+- Relevant audit logs and final disposition
+- Customer communication record, where applicable
+
+**Pass criteria:** An eligible reviewer accepts responsibility through the approved route, the handoff is traceable, and the case does not proceed contrary to required safeguards.
+
+**Fail criteria:** The case remains unowned beyond the approved service level, reassignment fails without the required escalation, or the workflow permits an unsupported lending decision.
+
+**Blocked/Inconclusive:** The test cannot be completed or evidence is insufficient to determine whether the control operated correctly.
+
+**Status:** Not run.
+
+**Production implication:** F004-03 remains open until implementation and successful testing are evidenced.
