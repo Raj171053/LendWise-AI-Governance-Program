@@ -86,3 +86,30 @@ F004-04 remains open until the required logging and integrity controls are imple
 ## 9. Data protection
 
 Use synthetic cases and fictitious identifiers. Do not commit real customer records, credentials, unrestricted production logs or sensitive documents to the public repository.
+
+## ALR-01 — Missing Escalation and Ownership Events
+
+**Scenario:** A synthetic credit challenge has a recorded challenge and final decision, but the escalation acknowledgement and ownership-transfer events are missing.
+
+**Expected result:** The required events are recorded accurately and can be traced to the relevant case, actor or system identity, and timestamps.
+
+**Observed result:** The challenge and final decision are present. The escalation acknowledgement and ownership-transfer events cannot be located in the available records.
+
+**Assessment:** The audit-trail completeness requirement is not demonstrated. Treat this as a failure of the logging control if the required events are confirmed missing; otherwise, retain Blocked/Inconclusive while investigating the evidence gap.
+
+**Evidence to retain:**
+- Synthetic case ID and challenge ID
+- Event IDs, reviewer or system identities, and available timestamps
+- Existing challenge and final-decision records
+- Log search scope, relevant backend records and audit-log results
+- Investigation steps, findings and integrity checks
+- Expected versus actual event sequence
+- Defect reference, remediation owner and retest evidence
+
+**Remediation:** Determine whether the events were never generated, were lost, were filtered from the available view, or were recorded in another authoritative system. Correct the root cause and test the logging workflow again.
+
+**Evidence integrity:** Do not backdate or fabricate missing events. Any recovered or reconstructed information must be clearly identified, dated when recovered, and linked to its source.
+
+**Status:** Not run as an operational test; scenario assessment identifies an evidence gap.
+
+**Production implication:** F004-04 remains open until the required logging controls are implemented, tested and independently reviewed.
