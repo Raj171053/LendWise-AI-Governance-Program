@@ -429,3 +429,30 @@ F-004 must not be closed until required controls are implemented, the relevant t
 **Independent Review:** Pending.
 
 **Closure Note:** RAT-02 may be treated as passed after the supporting evidence is verified as complete and traceable.
+
+### RAT-03 — Challenge and Review Workflow
+
+**Control Objective:** Ensure a reviewer challenge is documented with rationale and supporting evidence and follows the approved review workflow.
+
+**Expected Result:** Challenge is recorded with rationale and supporting evidence; case follows the approved review workflow.
+
+**Reported Actual Result:** The following evidence was identified: case record, evidence reference, reviewer rationale and decision history. Adherence to the complete approved review workflow remains to be verified.
+
+**Evidence References:**
+- Case record: Reference to be recorded.
+- Supporting evidence reference: Reference to be recorded.
+- Reviewer rationale: Reference to be recorded.
+- Decision history: Reference to be recorded.
+- Assignment and escalation records, where required: Pending verification.
+
+**Evidence Assessment:** The reported evidence supports challenge documentation and decision traceability. It does not yet establish that every required assignment, review and escalation step occurred in accordance with the approved workflow.
+
+**Provisional Test Status:** Blocked / Inconclusive — pending workflow verification.
+
+**Defect and Remediation:** No confirmed defect recorded. Verify the workflow history and identify any missing required steps before deciding whether remediation is necessary.
+
+**Retest Result:** Not applicable unless a defect is identified or retesting is required.
+
+**Independent Review:** Pending.
+
+**Closure Note:** RAT-03 may be marked Pass if the evidence confirms that the challenge was properly recorded and all required workflow steps were followed. If a required step was omitted, assess and record the resulting control failure.
