@@ -85,3 +85,29 @@ F004-03 remains open until the escalation matrix and SLA definitions are approve
 ## 9. Data protection
 
 Use synthetic cases and fictitious identifiers. Do not commit real customer information, credentials or confidential production logs to the public repository.
+
+## EOM-01 — Unassigned Challenge After SLA Breach
+
+**Test status:** Not run — design exercise completed; operational test evidence not available.
+
+**Scenario:** A synthetic credit challenge remains unassigned for five business hours against a proposed four-business-hour assignment target. The Head of Credit Risk is unavailable, the escalation queue is full, and no alert or backup escalation evidence is available.
+
+**Expected result:**
+- The assignment SLA breach is detected.
+- The approved backup escalation route is triggered.
+- The backup notification is delivered and acknowledged.
+- An eligible owner accepts responsibility for the case.
+- The case remains in the approved controlled state while the challenge is unresolved.
+- Relevant events are recorded and traceable.
+
+**Evidence required:** Synthetic case and challenge IDs, approved SLA configuration, event timestamps, alert-generation and delivery records, acknowledgement, owner role and assignment, case-state history, relevant logs, expected and actual outcomes, and defect reference where applicable.
+
+**Current assessment:** The scenario indicates a potential escalation-control failure. Because no operational test has been executed, the control's effectiveness has not been established.
+
+**Pass criteria:** The approved SLA breach and backup route operate as designed, ownership is acknowledged, the case remains appropriately controlled, and the evidence is retained.
+
+**Fail criteria:** A required alert or backup route does not operate, no accountable owner accepts the case within the approved procedure, or the case proceeds contrary to required safeguards.
+
+**Blocked/Inconclusive criteria:** The test cannot be completed or the evidence is insufficient to establish the actual control behaviour.
+
+**Production implication:** F004-03 remains open pending implementation evidence, successful testing and independent review.
