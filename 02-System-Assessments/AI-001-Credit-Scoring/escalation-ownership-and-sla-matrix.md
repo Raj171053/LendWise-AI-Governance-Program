@@ -151,3 +151,31 @@ Use synthetic cases and fictitious identifiers. Do not commit real customer info
 **Status:** Not run.
 
 **Production implication:** F004-03 remains open until implementation and successful testing are evidenced.
+
+
+### EOM-03 — Assignment Without Acknowledgement
+
+**Scenario:** The system assigns a synthetic credit challenge to Reviewer B. The dashboard displays “Assigned,” but no acknowledgement is received and the case remains untouched beyond the approved acknowledgement SLA.
+
+**Expected result:** The workflow detects the missed acknowledgement deadline, triggers the approved escalation route, and ensures that an eligible reviewer accepts responsibility within the applicable service level.
+
+**Evidence required:**
+- Synthetic case and challenge IDs
+- Assignment timestamp and approved acknowledgement SLA
+- Assignment delivery and acknowledgement records
+- Case status and activity history
+- Relevant backend and audit logs
+- SLA breach alert and delivery/acknowledgement records
+- Investigation findings and root-cause classification
+- Reassignment record, receiving reviewer role and acceptance timestamp
+- Final disposition and customer communication record, where applicable
+
+**Pass criteria:** The missed acknowledgement triggers the approved escalation process, responsibility is accepted by an eligible reviewer, and the case remains controlled.
+
+**Fail criteria:** The workflow fails to detect or escalate the breach, the case remains unowned beyond the approved process, or required safeguards are bypassed.
+
+**Blocked/Inconclusive:** Evidence is insufficient to determine whether the escalation and handoff controls operated as intended.
+
+**Status:** Not run.
+
+**Production implication:** F004-03 remains open until the controls are implemented and successful test evidence is independently reviewed.
