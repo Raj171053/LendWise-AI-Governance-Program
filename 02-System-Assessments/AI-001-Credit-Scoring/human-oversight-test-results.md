@@ -512,3 +512,33 @@ F-004 must not be closed until required controls are implemented, the relevant t
 **Limitation:** This is a reported training-test outcome. The result must not be treated as independently verified operational evidence until the underlying records have been reviewed.
 
 **Closure status:** RAT-05 does not independently establish that F-004 is closed. The overall finding remains open pending completion and verification of all required tests and independent review.
+
+### RAT-06 — API-Level Authorisation and Alternate Access Routes
+
+**Test objective:** Verify that reviewer permissions and delegated authority are enforced consistently across the normal user interface, APIs, and other relevant access routes.
+
+**Test scenario:** Attempt an override or other restricted action through an API or alternate route, including an action outside the reviewer's delegated authority.
+
+**Expected result:** Unauthorised actions are rejected; authorised actions follow approved delegation rules; the persisted decision and audit history remain accurate; and unauthorised attempts are logged.
+
+**Reported observation:** Unauthorised changes were rejected across relevant routes. Authorised actions followed approved delegation rules. Attempts were recorded in the audit/security logs, and evidence was reported as independently reviewed.
+
+**Evidence reported:**
+- API and application access-control configuration
+- Test results for relevant access routes
+- Audit/security logs for attempted actions
+- Persisted decision and case-state evidence
+- Independent review evidence
+
+**Provisional result:** Pass — evidence verification pending.
+
+**Evidence verification required:**
+1. Confirm the original decision and persisted case state remained unchanged after rejected actions.
+2. Verify that authorisation was enforced server-side across the tested routes.
+3. Confirm that authorised actions respected the approved delegation matrix.
+4. Verify that audit/security events identify the attempted action, actor, timestamp, and outcome as required.
+5. Record exact evidence references and the independent reviewer's identity, review date, scope, findings, and any exceptions.
+
+**Limitation:** The result reflects the reported training-test outcome. It is not independently verified operational evidence until the underlying records and review findings have been examined.
+
+**Closure status:** RAT-06 does not independently establish F-004 closure. The overall finding remains open pending evidence verification, resolution of outstanding test gaps, and formal independent review.
