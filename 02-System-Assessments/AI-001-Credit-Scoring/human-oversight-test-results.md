@@ -217,3 +217,159 @@ The proposed response aligns with the expected control design. Operational effec
 - **Production approval:** Not granted by this exercise.
 
 **Conclusion:** The walkthrough demonstrates understanding of audit-trail resilience. It does not establish that the operational control is effective or justify closing remediation.
+
+# Human Oversight Test Results — AI-001 Credit Scoring
+
+**System:** LendWise AI-001 — Credit Scoring  
+**Finding:** F-004 — Human Oversight Requirements Incomplete  
+**Test Environment:** Authorised test environment (assumed for this training exercise; execution evidence pending)  
+**Document Status:** Test results pending evidence  
+**Overall Test Status:** Not verified  
+**Finding Status:** Open — Remediation Required
+
+## 1. Purpose
+
+This document records the results of tests assessing whether AI-001 human-oversight controls operate as intended.
+
+Expected outcomes are defined in the test plan. Actual results must be supported by evidence from the test environment. A test must not be marked Pass solely because the expected behaviour has been documented.
+
+## 2. Test Result Recording Requirements
+
+For each test, record:
+
+- Test ID and test date.
+- Expected result.
+- Actual result.
+- Evidence reference.
+- Test status: Pass, Fail, Blocked / Inconclusive, or Not run.
+- Defect and remediation, where applicable.
+- Retest result, where applicable.
+- Tester and independent reviewer, where applicable.
+
+Until actual results and supporting evidence are available, the test status remains `Not verified` or `Not run`, as appropriate to the evidence available.
+
+## 3. Reviewer Authority Test Results
+
+### RAT-01 — Role-Based Access and Permitted Actions
+
+**Expected Result:** Reviewer can access only the information and actions permitted by their role.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Role and permission configuration, test user role, observed access results, relevant application/backend logs and evidence that prohibited actions are inaccessible.
+
+### RAT-02 — Unauthorised Override Attempt
+
+**Expected Result:** System blocks the action or routes the case through an approved authorisation workflow.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Attempted action, role and permissions, application/API response where applicable, persisted score and decision state, and audit/security logs. Verify that the action was prevented or properly authorised and that required events were recorded.
+
+### RAT-03 — Challenge and Review Workflow
+
+**Expected Result:** Challenge is recorded with rationale and supporting evidence; case follows the approved review workflow.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Challenge record, rationale, supporting evidence references, case status, assigned reviewer, timestamps, workflow history and relevant audit events.
+
+### RAT-04 — Approval Authority and Decision Routing
+
+**Expected Result:** Approval is prevented and the case is routed to the authorised decision-maker.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Reviewer role and authority, attempted approval, observed system response, routing record, authorised decision-maker assignment and persisted case state.
+
+### RAT-05 — Unauthorised Modification and Audit Trail
+
+**Expected Result:** Unauthorised modification is prevented or detected; the audit trail preserves the relevant event history.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Original record and integrity reference, tester role and permissions, attempted modification, before-and-after comparison, relevant application/backend/security logs and verification of required audit events.
+
+### RAT-06 — API-Level Authorisation and Alternate Access Paths
+
+**Expected Result:** To be confirmed against the approved Reviewer Authority test plan before execution. The test should establish whether applicable authorisation controls are enforced through relevant API/server-side routes and whether persisted outcomes and required audit events are correct.
+
+**Actual Result:** Pending evidence.
+
+**Evidence Reference:** Pending.
+
+**Test Status:** Not verified.
+
+**Defect and Remediation:** Pending test evidence.
+
+**Retest Result:** Not applicable yet.
+
+**Closure Evidence Required:** Approved test criteria, tester role and permissions, relevant API/backend response, persisted state, audit/security events and any defect/retest records.
+
+## 4. Defect and Remediation Register
+
+No defect conclusion is recorded here because final test evidence has not yet been supplied.
+
+For each failed or inconclusive test, record:
+
+- Defect ID.
+- Related test ID.
+- Expected versus actual behaviour.
+- Customer and operational impact.
+- Root cause or investigation status.
+- Accountable remediation owner.
+- Corrective action and target date.
+- Retest evidence and outcome.
+- Independent review decision.
+
+## 5. Overall Assessment
+
+**Overall Test Status:** Not verified — supporting evidence pending.
+
+The expected outcomes for RAT-01 through RAT-05 have been documented. Final outcomes and evidence have not yet been established in this record. RAT-06 acceptance criteria must also be confirmed against the approved test plan.
+
+**F-004 Closure Decision:** Open — Remediation Required.
+
+F-004 must not be closed until required controls are implemented, the relevant tests are executed and evidenced, defects are addressed or formally risk-accepted by an authorised decision-maker, and an independent review supports the closure decision.
+
+**AI-001 Production Approval:** Not Approved — Remediation Required.
