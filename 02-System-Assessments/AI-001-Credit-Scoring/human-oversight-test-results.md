@@ -401,3 +401,31 @@ The expected outcomes for RAT-01 through RAT-05 have been documented. Final outc
 F-004 must not be closed until required controls are implemented, the relevant tests are executed and evidenced, defects are addressed or formally risk-accepted by an authorised decision-maker, and an independent review supports the closure decision.
 
 **AI-001 Production Approval:** Not Approved — Remediation Required.
+
+### RAT-02 — Unauthorised Override Attempt
+
+**Control Objective:** Ensure unauthorised reviewers cannot override an AI-generated credit-risk outcome or bypass the approved authorisation workflow.
+
+**Expected Result:** System blocks the action or routes the case through an approved authorisation workflow.
+
+**Reported Actual Result:** The system blocked the unauthorised override, preserved the original decision and recorded the attempt in the required audit/security logs.
+
+**Evidence References:**
+- Test report: Reference to be recorded.
+- Reviewer role and permission configuration: Reference to be recorded.
+- Application response and authorisation result: Reference to be recorded.
+- Original and post-test decision state: Reference to be recorded.
+- Audit/security event and correlation ID: Reference to be recorded.
+- Relevant backend/API evidence, where applicable: Reference to be recorded.
+
+**Evidence Assessment:** The reported observation meets the expected control behaviour. Final acceptance depends on reviewing the underlying records and confirming that the original decision remained unchanged and the required security event was persisted and retrievable.
+
+**Provisional Test Status:** Pass — pending evidence verification.
+
+**Defect and Remediation:** No defect reported in the supplied observation. This does not establish that no defect exists outside the tested scope.
+
+**Retest Result:** Not applicable unless a defect is identified or retesting is otherwise required.
+
+**Independent Review:** Pending.
+
+**Closure Note:** RAT-02 may be treated as passed after the supporting evidence is verified as complete and traceable.
