@@ -121,3 +121,23 @@ SEA-02 — Initial Test Assessment
 - Initial triage and owner assignment should occur promptly across cases; substantive investigation should be prioritised by assessed risk and urgency.
 - The rationale, assigned owner, escalation actions, customer impact assessment and final disposition must be recorded.
 - These are proposed governance actions, not evidence of an implemented or tested LendWise workflow.
+
+
+### Fallback — Reviewer Unavailable or Escalation Queue Full
+
+**Trigger:** A material credit-data challenge is unresolved, the primary decision-maker is unavailable or the escalation queue is full, and the lending decision deadline is approaching.
+
+**Required behaviour:**
+
+1. Keep the case in the appropriate controlled review state; do not permit approval contrary to the approved evidence and decision requirements.
+2. Route the case to a pre-designated, authorised backup reviewer or escalation owner.
+3. Record the original challenge time, decision deadline, assignment attempts, queue condition and escalation actions.
+4. Alert the designated backup or responsible manager when the assignment or resolution SLA is at risk or breached.
+5. Maintain an accountable owner until the case is resolved, and communicate any material delay according to approved procedures.
+6. Resume the lending workflow only when the evidence issue and applicable approval requirements have been addressed.
+
+**Evidence required:** Workflow configuration, backup-owner mapping, assignment and escalation timestamps, case-state history, audit logs, reviewer decision and rationale, and relevant customer communication records.
+
+**Test status:** Proposed control; not run.
+
+**Closure condition:** The fallback is implemented, tested under primary-reviewer unavailability and queue saturation, and independently reviewed.
