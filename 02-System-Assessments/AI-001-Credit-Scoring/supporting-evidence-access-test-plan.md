@@ -90,3 +90,13 @@ F004-02 remains open until:
 Use synthetic cases and fictitious identifiers. Do not place real customer records, credentials or confidential production logs in the public repository.
 
 SEA-02 — Initial Test Assessment
+
+### SEA-03 — Conflicting or Newer Verified Evidence
+
+- **Scenario:** The scoring system contains synthetic monthly income of ₹60,000, while a newer verified document records ₹45,000.
+- **Expected result:** The discrepancy and source timestamps are visible; the reviewer can challenge the case; the system records the evidence and routes the challenge appropriately.
+- **Additional validation:** Establish which income value was actually used by the model, assess the relevance of the discrepancy, and verify the documented resolution and any required rescoring.
+- **Evidence:** Source records, timestamps, input snapshot, model version, score-generation record, challenge history, escalation outcome and relevant logs.
+- **Status:** Not run.
+- **Acceptance criteria:** The discrepancy can be traced, investigated and resolved through an accountable workflow. No unsupported assumption is made about its effect on the score.
+- **Production implication:** F004-02 remains open until the relevant controls are implemented and successfully tested.
