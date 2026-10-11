@@ -68,17 +68,24 @@ Do not classify a proposed test plan or tabletop answer as operational test evid
 
 ## 5. Test Status Register
 
-All operational tests must remain `Not run` until they are genuinely executed and evidence is retained.
+The training scenarios below have been discussed in the project history. Their completion does not constitute operational test execution. Preserve the operational status as `Not run` until a test has actually been executed in an authorised environment and the required evidence retained.
 
-| Workstream | Test IDs | Current Operational Status | Required Next Action |
-|---|---|---|---|
-| F004-01 — Reviewer authority | RAT-01 to RAT-06 | Not run unless separately executed and evidenced | Confirm the test cases in the committed reviewer-authority test record, implement the relevant controls and execute the tests. |
-| F004-02 — Supporting-evidence access | SEA-01 to SEA-07 | Not run unless separately executed and evidenced | Confirm the test cases in the supporting-evidence test plan, implement the relevant controls and execute the tests. |
-| F004-03 — Escalation ownership and SLAs | EOM-01 to EOM-03 | Not run unless separately executed and evidenced | Obtain approval for SLA targets and ownership arrangements, implement them and execute the tests. |
-| F004-04 — Audit logging and record integrity | ALR-01 to ALR-07 | Not run | Finalise control implementation requirements, execute the tests in an authorised environment and retain the evidence. |
+| Workstream | Test IDs | Training / documentation status | Current operational status | Remaining action |
+|---|---|---|---|---|
+| F004-01 — Reviewer authority | RAT-01 to RAT-06 | Scenarios discussed; results reportedly presented to CTO and referred for final AI Governance approval | Not run unless separately executed and evidenced | Verify supporting evidence, complete RAT-03 workflow verification, and obtain documented governance approval |
+| F004-02 — Supporting-evidence access | SEA-01 to SEA-07 | Scenarios assessed | Not run unless separately executed and evidenced | Investigate SEA-02, finalise the consolidated results record, and verify implementation and operational evidence |
+| F004-03 — Escalation ownership and SLAs | EOM-01 to EOM-03 | All three training exercises completed in the prior discussion | Not run unless separately executed and evidenced | Obtain approval for SLA targets and ownership arrangements, verify implementation, and execute tests when authorised; do not repeat training exercises |
+| F004-04 — Audit logging and record integrity | ALR-01 to ALR-07 | Scenarios discussed; consolidated assessment record remains to be completed | Not run | Consolidate prior assessments, investigate identified scenario gaps, verify implementation, and execute tests when authorised |
 
-If any test has been executed since this matrix was drafted, update its status only when the corresponding evidence record supports that status.
+**Status rules**
 
+- `Pass` requires actual execution, evidence meeting the acceptance criteria and appropriate review.
+- `Fail` requires evidence that an executed test confirmed a control failure.
+- `Blocked / Inconclusive` applies when evidence is insufficient or investigation is incomplete.
+- `Not run` means no operational execution has been evidenced.
+- A tabletop assessment may identify a potential control gap, but it must not be represented as a confirmed operational defect without supporting evidence.
+
+Update this register only when the corresponding test record supports the change.
 ## 6. Defect and Remediation Tracking
 
 For every failed or inconclusive test, maintain a linked defect or remediation record containing:
@@ -97,15 +104,17 @@ Where evidence is missing, preserve the gap transparently. Do not backdate recor
 
 ## 7. Dependencies and Open Questions
 
-The following items must be resolved or explicitly accepted by the appropriate authority before closure:
+The following dependencies remain open unless and until supporting evidence demonstrates otherwise.
 
-1. **Reviewer authority:** Confirm the end-to-end lending workflow, permitted reviewer roles, override authority and restrictions on automated rejection or decision gating.
-2. **Supporting evidence:** Define which source documents and data fields are required, how source reliability and freshness are assessed, and what happens when evidence is unavailable or conflicting.
-3. **Escalation and SLAs:** Approve acknowledgement, assignment and escalation targets; define business-hour calendars, clock-start rules, backup ownership and queue-saturation procedures.
-4. **Audit logging:** Confirm required event types, timestamp conventions, security-event logging, integrity protection, retention, monitoring and outage-recovery requirements.
-5. **Implementation evidence:** Identify the systems and environments where controls are configured and the authorised individuals who can provide evidence.
-6. **Independent review:** Confirm who is authorised to review the evidence and approve closure independently of the control implementation.
-7. **Residual risk:** Document any remaining limitations and obtain formal risk acceptance from an authorised decision-maker where applicable.
+1. **Reviewer authority — F004-01:** Verify reviewer permissions and decision boundaries, complete the outstanding RAT-03 workflow verification, confirm the integrity of the supporting evidence, and obtain the final AI Governance approval decision.
+2. **Supporting evidence — F004-02:** Investigate SEA-02, including alternate application/API access routes and the missing audit event. Confirm approved evidence requirements, source reliability and freshness rules, conflict handling, controlled fallback and escalation.
+3. **Escalation and SLAs — F004-03:** Obtain business-owner approval for acknowledgement, assignment and escalation targets; define business calendars and clock-start rules; confirm primary and backup ownership, queue-saturation handling, notification delivery, acknowledgement and explicit ownership acceptance.
+4. **Audit logging — F004-04:** Consolidate the previously discussed ALR assessments. Verify required event types, timestamp and ingestion conventions, security-event logging, access controls, record integrity, retention, monitoring, outage handling and recovery.
+5. **Implementation and operational evidence:** Identify the relevant systems and authorised test environments. Retain approved configurations, workflow records, dated test evidence, defects, remediation and retest records.
+6. **Independent review:** Confirm the authorised independent reviewer and retain a documented review of the implementation and operational evidence before closure.
+7. **Residual risk:** Assess unresolved limitations and obtain formal risk acceptance from an authorised decision-maker where applicable.
+
+These items are open dependencies, not assertions that all underlying controls have failed. Record a confirmed defect only when supported by evidence; otherwise retain the item as pending verification or under investigation.
 
 ## 8. Closure Acceptance Criteria
 
@@ -131,7 +140,9 @@ Checking a box indicates completion only when the corresponding evidence support
 **Closure Decision:** Open  
 **AI-001 Production Approval:** Not Approved — Remediation Required
 
-**Rationale:** The project has documented the intended human-oversight controls and developed test scenarios. However, this matrix does not establish that all controls have been implemented or that operational tests have passed. Closure requires implementation evidence, test results, remediation of identified defects and independent review.
+**Rationale:** The project has documented proposed human-oversight controls and discussed the associated synthetic training scenarios. However, the available records do not establish that all required controls have been implemented and operationally tested. Supporting evidence verification, outstanding workflow investigation, approval of escalation arrangements, audit-logging verification, operational test evidence and the required independent closure review remain outstanding.
+
+The completion of training scenarios must not be represented as successful operational testing. Potential gaps identified during scenario discussions must be investigated before they are recorded as confirmed operational defects. F-004 must remain open until the applicable closure criteria are evidenced and an authorised closure decision is recorded.
 
 ## 10. Closure Sign-Off Record
 
@@ -140,14 +151,16 @@ Complete this section only after the required evidence has been reviewed.
 | Field | Value |
 |---|---|
 | Finding ID | F-004 |
-| Closure recommendation | Pending evidence review |
+| Closure recommendation | Remediation required; closure not recommended at this stage |
 | Control owner | Head of Credit Risk, subject to confirmation |
 | Independent reviewer | AI Governance / Model Risk, subject to confirmation |
-| Evidence review date | Not yet completed |
-| Outstanding defects | To be confirmed after operational testing |
-| Residual risk decision | Pending |
-| Final closure decision | Open |
-| Closure rationale | Awaiting implementation evidence, operational test results and independent review |
+| Evidence review date | Pending |
+| Outstanding defects and gaps | Confirmed defects and unresolved evidence gaps to be recorded after investigation and operational testing |
+| Residual risk decision | Pending authorised assessment |
+| Final closure decision | Open — Remediation Required |
+| Closure rationale | Awaiting verification of implementation, operational test results, remediation and retest evidence where applicable, independent review, and authorised closure approval |
+
+No sign-off or approval should be inferred from the completion of training exercises or preparation of this matrix.
 
 ---
 
