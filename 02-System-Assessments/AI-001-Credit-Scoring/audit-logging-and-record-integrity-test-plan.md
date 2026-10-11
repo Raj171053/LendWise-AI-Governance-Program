@@ -113,3 +113,30 @@ Use synthetic cases and fictitious identifiers. Do not commit real customer reco
 **Status:** Not run as an operational test; scenario assessment identifies an evidence gap.
 
 **Production implication:** F004-04 remains open until the required logging controls are implemented, tested and independently reviewed.
+
+### ALR-03 — Unauthorised Audit-Record Deletion
+
+**Scenario:** A user with ordinary reviewer permissions attempts to delete a synthetic audit event. The interface displays “Permission denied.”
+
+**Initial observation:** The application denied the attempted deletion. This is preliminary evidence that the interface-level restriction operated.
+
+**Test result:** Blocked/Inconclusive pending verification of record preservation, server-side authorisation and relevant audit evidence.
+
+**Expected result:** The unauthorised deletion is prevented across relevant access paths; the original record remains intact; and the attempted action is logged where required by the approved policy.
+
+**Evidence required:**
+- Synthetic event ID and original record or integrity reference
+- Reviewer role and permission configuration
+- Application response and relevant API/backend test results
+- Before-and-after record comparison or integrity verification
+- Relevant audit logs and correlation IDs
+- Evidence of the attempted action being recorded, where required
+- Independent reviewer assessment
+
+**Remediation:** Investigate any successful unauthorised modification, missing required security event or integrity discrepancy. Correct the control and retest.
+
+**Status:** Not run as an operational test.
+
+**Closure criteria:** Relevant access paths have been tested, the record-integrity requirements are satisfied, supporting evidence is retained, and the result is independently reviewed.
+
+**Production implication:** F004-04 remains open until implementation and successful testing are evidenced.
