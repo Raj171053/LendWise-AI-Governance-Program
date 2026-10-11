@@ -111,3 +111,16 @@ Use synthetic cases and fictitious identifiers. Do not commit real customer info
 **Blocked/Inconclusive criteria:** The test cannot be completed or the evidence is insufficient to establish the actual control behaviour.
 
 **Production implication:** F004-03 remains open pending implementation evidence, successful testing and independent review.
+
+### EOM-01 Remediation Record
+
+- **Finding:** Assignment SLA breach does not reliably trigger a documented backup escalation and acknowledged ownership.
+- **Priority:** Proposed High, subject to the organisation's approved severity methodology.
+- **Proposed accountable owner:** Head of Credit Risk.
+- **Technical remediation owner:** To be assigned by the responsible team.
+- **Required action:** Implement and validate SLA monitoring, breach detection, backup notification, acknowledgement tracking and assignment to an eligible owner.
+- **Dependencies:** Approved SLA definitions, named backup roles, queue ownership and access to workflow/audit evidence.
+- **Closure evidence:** Configuration evidence, executed test results, alert delivery and acknowledgement records, case-state history, relevant logs, successful retest and independent review.
+- **Status:** Open — operational failure not yet confirmed by an executed test.
+- **Closure decision:** Open.
+- **Production gate:** F004-03 remains unresolved until the applicable escalation controls are implemented and their effectiveness is evidenced.
