@@ -179,3 +179,14 @@ Use synthetic cases and fictitious identifiers. Do not commit real customer info
 **Status:** Not run.
 
 **Production implication:** F004-03 remains open until the controls are implemented and successful test evidence is independently reviewed.
+
+### EOM-03 — Closure Assessment
+
+- **Observed outcome:** The challenge was eventually resolved.
+- **Evidence gap:** The audit log does not contain the acknowledgement timestamp or escalation history.
+- **Test result:** Blocked/Inconclusive for control effectiveness, pending investigation of the missing records.
+- **Required action:** Examine available backend, application and audit records; determine why the acknowledgement and escalation events are missing; and establish whether the required controls operated.
+- **Retest:** Verify that assignment, acknowledgement, escalation and resolution events are captured and traceable.
+- **Acceptance criteria:** The required event sequence is supported by reliable evidence, any logging defect is addressed, and the control is independently reviewed.
+- **Status:** Not run as an operational test; closure not approved.
+- **Production implication:** F004-03 remains open.
