@@ -53,3 +53,15 @@ F004-01 remains open until the approved authority rules are implemented, relevan
 Use synthetic identifiers in training artifacts. Do not include real customer records, credentials, personal data or confidential production logs in the public repository.
 
 Link only to evidence that actually exists. Clearly label tabletop exercises and mock results; never present them as tests of a live or configured system.
+
+### RAT-02 — Initial Test Result
+
+- **Scenario:** Reviewer with view-only access attempts to override a credit score.
+- **Expected result:** The override is denied, the score remains unchanged, and the attempted action is recorded in the audit trail.
+- **Observed result:** The persisted score remained unchanged. No corresponding audit event was found.
+- **Control result:** FAIL — the permission restriction passed this test attempt, but the audit-logging requirement failed.
+- **Evidence required:** Test account and role configuration, synthetic case reference, timestamp, attempted action, application response, before/after persisted score, relevant application/backend logs and audit-log search results.
+- **Remediation:** Investigate the missing audit event, repair the logging path or configuration, and repeat the test.
+- **Retest acceptance criteria:** The unauthorised override remains blocked, the score is unchanged, the denied attempt is recorded accurately, and the evidence is independently reviewed.
+- **Status:** Remediation required; retest not run.
+- **Production implication:** F004 remains open. This test does not establish production readiness.
