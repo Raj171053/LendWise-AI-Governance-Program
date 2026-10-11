@@ -65,3 +65,14 @@ Link only to evidence that actually exists. Clearly label tabletop exercises and
 - **Retest acceptance criteria:** The unauthorised override remains blocked, the score is unchanged, the denied attempt is recorded accurately, and the evidence is independently reviewed.
 - **Status:** Remediation required; retest not run.
 - **Production implication:** F004 remains open. This test does not establish production readiness.
+
+### RAT-06 — Unauthorised API Override
+
+- **Scenario:** A reviewer with view-only access attempts to change a credit score through an API endpoint.
+- **Expected result:** The server rejects the unauthorised request. The score remains unchanged, and the attempt is recorded in the audit trail.
+- **Evidence required:** Test role and permission configuration, synthetic case ID, API request and response, before/after persisted score, server-side authorisation logs, audit event and correlation ID.
+- **Initial result:** Fail — the API route permitted an unauthorised override.
+- **Remediation:** Enforce server-side authorisation on the endpoint, review related endpoints for equivalent weaknesses, and retest with authorised and unauthorised roles.
+- **Retest status:** Not run.
+- **Acceptance criteria:** Unauthorised changes are rejected across relevant routes; authorised actions follow the approved delegation rules; attempts are logged; and evidence is independently reviewed.
+- **Production implication:** F004 remains open until the applicable controls and evidence requirements are satisfied.
