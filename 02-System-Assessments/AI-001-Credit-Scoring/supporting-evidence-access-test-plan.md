@@ -100,3 +100,13 @@ SEA-02 — Initial Test Assessment
 - **Status:** Not run.
 - **Acceptance criteria:** The discrepancy can be traced, investigated and resolved through an accountable workflow. No unsupported assumption is made about its effect on the score.
 - **Production implication:** F004-02 remains open until the relevant controls are implemented and successfully tested.
+
+### SEA-03 — Unassigned Challenge and Escalation Delay
+
+- **Scenario:** A reviewer challenges a credit score based on conflicting verified evidence. The workflow records the challenge, but no owner is assigned.
+- **Expected result:** The challenge is assigned within the approved service level. If assignment fails or the deadline is breached, the system identifies the overdue case and routes it through the defined backup or escalation process.
+- **Evidence:** Challenge creation timestamp, assignment timestamp, queue state, SLA configuration, alert or escalation record, designated owner and final disposition.
+- **Failure criteria:** An assignment deadline is breached without the required alert, escalation or fallback, or the case proceeds contrary to the approved workflow.
+- **Investigation:** Determine whether the cause was capacity, routing configuration, unavailable staff, a technical failure or another factor.
+- **Status:** Not run.
+- **Production implication:** F004-02 remains open until the assignment and escalation controls are implemented and tested.
