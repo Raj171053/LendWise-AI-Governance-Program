@@ -162,3 +162,25 @@ SEA-02 — Initial Test Assessment
 **Status:** Not run.
 
 **Production implication:** F004-02 remains open until implementation and successful testing are evidenced.
+
+### SEA-07 — Evidence Retrieval and Primary Escalation Unavailable
+
+**Scenario:** The primary reviewer is unavailable, the designated backup cannot access supporting income evidence, and the approved evidence-retrieval process is unavailable. The lending decision deadline has passed.
+
+**Expected behaviour:**
+
+- The case remains in the approved controlled pending state; unsupported approval is not permitted.
+- A named authorised escalation owner is assigned.
+- The evidence-retrieval failure, deadline breach and customer impact are recorded.
+- The designated senior reviewer or responsible manager is notified through the approved escalation route.
+- A new review deadline and next escalation trigger are recorded.
+- Customer communication follows the approved procedure.
+- The case resumes only after the evidence issue is resolved and applicable approval requirements are satisfied.
+
+**Evidence to retain:** Case reference, timestamps, failed retrieval attempts, queue and assignment history, owner acknowledgement, escalation record, decision deadline, customer communication record and final disposition.
+
+**Acceptance criteria:** The case remains controlled, has a named owner, follows the escalation procedure and cannot bypass required evidence checks.
+
+**Status:** Not run.
+
+**Closure requirement:** The fallback is implemented, tested under the relevant failure conditions, and independently reviewed.
