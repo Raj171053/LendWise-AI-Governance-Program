@@ -141,3 +141,24 @@ SEA-02 — Initial Test Assessment
 **Test status:** Proposed control; not run.
 
 **Closure condition:** The fallback is implemented, tested under primary-reviewer unavailability and queue saturation, and independently reviewed.
+
+
+### Fallback Validation — Backup Reviewer Lacks Supporting Evidence
+
+**Scenario:** The primary decision-maker is unavailable. The designated backup reviewer is authorised to review the case but cannot access the underlying income evidence.
+
+**Expected behaviour:**
+
+1. The workflow prevents unsupported approval under the approved lending procedure.
+2. The access problem is recorded and assigned to an accountable owner.
+3. The case is routed through an approved evidence-retrieval or alternative escalation process.
+4. The decision deadline and escalation status are monitored.
+5. The case resumes only when the evidence and applicable authorisation requirements are satisfied.
+
+**Evidence to retain:** Reviewer role and permissions, evidence-access failure, case state before and after the attempt, assignment and escalation timestamps, owner acknowledgement, retrieval outcome and final decision record.
+
+**Acceptance criteria:** The backup reviewer cannot bypass the evidence requirement; the access issue has an accountable owner; and the workflow provides a tested route to resolution.
+
+**Status:** Not run.
+
+**Production implication:** F004-02 remains open until implementation and successful testing are evidenced.
