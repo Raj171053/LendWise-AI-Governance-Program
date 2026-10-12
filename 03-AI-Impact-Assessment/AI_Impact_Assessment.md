@@ -216,3 +216,47 @@ This is a proposed process. It must be implemented, legally reviewed and tested 
 Privacy and individual-rights safeguards are not yet sufficiently evidenced to support approval of AI-001. LendWise must document the applicable legal framework, implement an auditable request-handling process, validate access and correction workflows, and establish an effective route to challenge AI-influenced lending outcomes.
 
 **Approval status remains: NOT APPROVED — REMEDIATION REQUIRED.**
+
+## 8. Benefits, Alternatives and Proportionality
+
+### 8.1 Intended benefits
+
+AI-001 is intended to generate credit-risk scores that support human lending assessments.
+
+Potential benefits include:
+- More consistent assessment of relevant credit information.
+- Faster processing of applications.
+- Better identification of repayment-risk patterns.
+- More structured decision support for credit reviewers.
+
+These are intended benefits, not demonstrated outcomes. LendWise must validate them against a documented baseline before claiming that the system improves decision quality, efficiency or fairness.
+
+### 8.2 Potential adverse effects
+
+The system may also:
+- Reproduce biases in historical lending data.
+- Use proxy variables that create unjustified disparities.
+- Produce inaccurate scores for underrepresented applicants.
+- Encourage reviewers to rely excessively on automated recommendations.
+- Make it difficult for applicants to understand or challenge outcomes.
+- Create operational dependence on a model whose performance may deteriorate over time.
+
+### 8.3 Alternatives to assess
+
+| Alternative | Potential benefit | Limitation or safeguard required |
+|---|---|---|
+| Human-led assessment without AI scoring | Reduces dependence on the model | May be slower and can still involve inconsistent or biased decisions |
+| AI score used only as supplementary information | Limits the model's influence | Requires evidence that reviewers do not treat the score as determinative |
+| Restricted pilot with enhanced review | Enables controlled evaluation before wider deployment | Must use authorised testing, defined boundaries and effective monitoring |
+| Alternative model or feature set | May reduce unjustified disparities or improve reliability | Requires independent validation; improvement cannot be assumed |
+| Do not deploy until material gaps are resolved | Avoids introducing unvalidated AI-related risk | Delays the intended operational benefits |
+
+### 8.4 Proportionality assessment
+
+The use of AI-001 should be proportionate to its intended purpose and the risks to applicants. LendWise must demonstrate that the model provides a defensible benefit, uses necessary and appropriate data, performs adequately for relevant groups, and does not impose unjustified harm.
+
+A less risky alternative should be considered where it can achieve the legitimate objective effectively. Convenience, speed or a higher aggregate accuracy score alone is not sufficient to justify material disparities or ineffective human oversight.
+
+### 8.5 Initial conclusion
+
+The potential benefits of AI-assisted credit assessment remain unverified. Given the unresolved fairness, data-quality and oversight findings, LendWise should not proceed to production deployment at this stage. Alternative approaches and restricted testing may be evaluated only within an authorised governance process.
