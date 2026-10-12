@@ -114,3 +114,41 @@ Required next steps include:
 4. Define applicant explanations, complaints and escalation routes.
 5. Establish monitoring, incident response and change-triggered reassessment.
 6. Document residual risks and obtain an authorised, independent approval decision before production use.
+
+## 6. Mitigation and Evidence Plan
+
+### 6.1 Control mapping
+
+| Harm ID | Required safeguard | Accountable function (proposed) | Evidence required | Related existing finding |
+|---|---|---|---|---|
+| H-01 — Unfair credit exclusion | Test approval outcomes across relevant groups and investigate unexplained disparities | Head of Credit Risk | Defined fairness metrics, group-level results, sample sizes, investigation records and independent validation | F-001, F-002, F-006 |
+| H-02 — Incorrect credit assessment | Validate input quality, target labels, representativeness and model performance | Model Risk / Data Science | Data-quality report, label definition, validation results, limitations and remediation records | F-003, F-005 |
+| H-03 — Proxy discrimination | Assess proxy variables, feature necessity and potential indirect discrimination | Model Risk / Fairness Review | Feature-level proxy assessment, rationale for retaining variables, group-level testing and reviewer sign-off | F-001, F-002 |
+| H-04 — Inadequate human review | Establish reviewer authority, competency, escalation, evidence access and audit logging | Head of Credit Risk, with Compliance and Technology | Approved oversight procedure, competency records, access-control evidence, escalation tests and audit-log tests | F-004, F-010 |
+| H-05 — Insufficient explanation or contestability | Define appropriate explanations, complaints handling and routes to challenge lending outcomes | Credit Operations / Compliance | Approved customer communications, complaint workflow, escalation ownership and sample-case evidence | F-009 |
+| H-06 — Privacy or data misuse | Document data sources, lawful processing, data minimisation, access, retention and applicable rights processes | Data Protection / Privacy function | Data-flow documentation, data inventory, privacy assessment, access records and retention rules | Assessment gap; confirm relevant tracker mapping |
+| H-07 — Delayed detection of harm | Establish ongoing performance and fairness monitoring, incident handling and reassessment triggers | Model Risk / AI Governance | Monitoring specification, thresholds, alert ownership, incident records and reassessment procedure | F-008, F-009 |
+
+**Ownership note:** Functions listed above are proposed. Confirm named accountable owners and approval authority before treating assignments as operational.
+
+### 6.2 Evidence principles
+
+For each safeguard, distinguish between:
+
+1. **Design evidence:** A policy, procedure, control specification or approved plan exists.
+2. **Implementation evidence:** The safeguard is deployed and configured in the relevant environment.
+3. **Test evidence:** An appropriately authorised test has been executed, with recorded results and defects.
+4. **Effectiveness evidence:** Results show that the safeguard works as intended over a suitable period and scope.
+5. **Closure evidence:** The authorised independent reviewer has accepted the evidence and recorded a closure decision.
+
+A drafted procedure or planned test alone does not demonstrate implementation or effectiveness.
+
+### 6.3 Residual-risk treatment
+
+The assessment must record the risk remaining after each safeguard is implemented and validated. Residual risk must not be marked acceptable solely because an action has been assigned or a document has been created.
+
+Any proposed acceptance of material residual risk requires a documented rationale, an authorised decision-maker, applicable legal and regulatory review, and evidence that the decision is within that person's authority. A risk acceptance decision cannot override a legal prohibition or mandatory requirement.
+
+### 6.4 Approval conditions
+
+AI-001 remains **Not Approved — Remediation Required** until the applicable high-priority gaps are resolved, controls are implemented and tested, required evidence is retained, and authorised independent review supports a production decision.
