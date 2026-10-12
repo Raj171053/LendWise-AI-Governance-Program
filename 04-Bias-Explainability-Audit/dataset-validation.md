@@ -126,3 +126,14 @@ These coefficients describe associations with the model's predicted bad-credit s
 **Limitations:** The evaluation uses 200 historical public-dataset test records. The observed differences may be sensitive to a small number of predictions. Removing a feature does not establish that correlated proxy information has been eliminated. These results do not establish fairness, legal compliance, or production performance.
 
 **Recommended follow-up:** Compare group-level outcomes using the original `foreign_worker` categories for both models, inspect group sample sizes and uncertainty, and assess the feature's justification and potential proxy effects before making a governance recommendation.
+### Group-level feature-removal comparison
+
+**Method:** Compared baseline and feature-removal predictions on the same held-out test records, grouped by the original `foreign_worker` category.
+
+**Results:** For A201, baseline FPR was 14.81% (20/135) and FNR was 42.37% (25/59). Without `foreign_worker`, FPR was 11.85% (16/135) and FNR was 47.46% (28/59).
+
+For A202, both models produced FPR and FNR of 0% in this test sample. However, the group contained only six records: five actual good-credit cases and one actual bad-credit case.
+
+**Preliminary interpretation:** Removing the feature reduced FPR but increased FNR for A201. A202's unchanged zero error rates are not reliable evidence of fairness because the group is extremely small. The experiment does not establish causation, eliminate proxy risk, or prove fairness or discrimination.
+
+**Limitations and follow-up:** Results are based on a small held-out sample from a historical public dataset. Assess feature justification, possible correlated proxies, uncertainty, and group representation before making a governance recommendation. Do not treat these exploratory results as LendWise production evidence.
