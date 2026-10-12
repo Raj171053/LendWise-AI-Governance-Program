@@ -82,3 +82,19 @@ These coefficients describe associations with the model's predicted bad-credit s
 **Governance concerns:** The use of financial circumstances, property ownership, and housing circumstances warrants documented purpose and proportionality review. Reviewers should investigate whether these features are justified, whether they act as proxies for protected or vulnerable groups, and how their inclusion affects group-level error rates and individual explanations.
 
 **Limitations:** This is an exploratory model trained on the historical UCI German Credit dataset, not LendWise production data. Findings require further validation and cannot establish the performance, fairness, or legal compliance of LendWise's actual system.
+
+### Housing-group error-rate analysis
+
+**Method:** Evaluated the logistic-regression baseline on the existing held-out test set of 200 records. Group-specific confusion matrices were used to calculate false-positive rates (FPR) and false-negative rates (FNR).
+
+**Results:**
+
+- `A151` (rent): 35 records; FPR 36.4% (8/22 actual good-credit cases); FNR 23.1% (3/13 actual bad-credit cases).
+- `A152` (own housing): 143 records; FPR 9.5% (10/105 actual good-credit cases); FNR 50.0% (19/38 actual bad-credit cases).
+- `A153` (free housing): 22 records; FPR 15.4% (2/13 actual good-credit cases); FNR 33.3% (3/9 actual bad-credit cases).
+
+**Preliminary observation:** Error rates differ across housing categories. The rent category has the highest FPR, while the own-housing category has the highest FNR. These differences warrant further investigation into model behavior, feature justification, and potential socioeconomic proxy effects.
+
+**Limitations:** The test-set groups are small and the estimates are uncertain. These results do not establish statistical significance, causation, unlawful discrimination, or a confirmed production-system defect. The analysis uses a historical public dataset and must not be presented as evidence of LendWise production performance.
+
+**Recommended follow-up:** Examine uncertainty intervals, assess whether housing information is justified for the intended lending purpose, review interactions with other features, and conduct independent validation before any production approval decision.
