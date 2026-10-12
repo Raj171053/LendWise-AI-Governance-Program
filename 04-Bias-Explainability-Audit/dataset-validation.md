@@ -71,3 +71,14 @@ The observed FPR is higher for the under-25 group, but the confidence interval i
 
 ### Limitations
 The comparison is exploratory, uses a historical German credit dataset and an analyst-selected age threshold, and is based on a small under-25 test subgroup. Statistical uncertainty, label validity, group definition and external validity remain relevant limitations. These findings do not validate LendWise's production model.
+
+
+### Preliminary coefficient interpretation
+
+The logistic-regression baseline assigns positive coefficients to features including installment rate, credit amount, loan duration, the `A124` property category, and the `A11` checking-account category. Negative coefficients include `A14` (no checking account), `A34` (critical credit history or other credits at another institution), and `A153` (housing provided free of charge).
+
+These coefficients describe associations with the model's predicted bad-credit score, conditional on other model inputs. They do not establish causality, justify a lending policy, or independently demonstrate discrimination. The coefficients were estimated after preprocessing and scaling; their magnitudes should not be interpreted as raw-unit effects or directly comparable measures of feature importance.
+
+**Governance concerns:** The use of financial circumstances, property ownership, and housing circumstances warrants documented purpose and proportionality review. Reviewers should investigate whether these features are justified, whether they act as proxies for protected or vulnerable groups, and how their inclusion affects group-level error rates and individual explanations.
+
+**Limitations:** This is an exploratory model trained on the historical UCI German Credit dataset, not LendWise production data. Findings require further validation and cannot establish the performance, fairness, or legal compliance of LendWise's actual system.
