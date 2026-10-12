@@ -98,3 +98,19 @@ These coefficients describe associations with the model's predicted bad-credit s
 **Limitations:** The test-set groups are small and the estimates are uncertain. These results do not establish statistical significance, causation, unlawful discrimination, or a confirmed production-system defect. The analysis uses a historical public dataset and must not be presented as evidence of LendWise production performance.
 
 **Recommended follow-up:** Examine uncertainty intervals, assess whether housing information is justified for the intended lending purpose, review interactions with other features, and conduct independent validation before any production approval decision.
+
+### Individual prediction explanation — exploratory case
+
+**Method:** Decomposed one held-out logistic-regression prediction into the model intercept and transformed-feature contributions.
+
+**Selected record:** Actual label 0 (good credit); predicted label 0 (good credit); estimated bad-credit probability 19.04%. The model's total log-odds score was approximately −1.4472, calculated from an intercept of −4.3034 and summed feature contributions of +2.8562.
+
+**Largest positive contributions:** Installment rate (+1.0584), `foreign_worker_A201` (+0.7170), loan duration (+0.5054), `other_installment_plans_A141` (+0.4897), and dependents (+0.3598).
+
+**Largest negative contributions:** `savings_account_A64` (−1.0058), `property_A121` (−0.3328), age (−0.1784), `purpose_A49` (−0.1655), and `telephone_A192` (−0.1620).
+
+**Governance observation:** The positive contribution associated with `foreign_worker_A201` warrants review of feature justification, potential proxy effects, group-level performance, and applicable legal requirements. This observation is a review trigger, not evidence of unlawful discrimination.
+
+**Limitations:** This is one explanation for one record from a historical public dataset. Contributions are specific to the fitted model and preprocessing pipeline; they are not causal effects or direct changes in probability. The example does not establish LendWise production behavior, overall fairness, or legal compliance.
+
+**Recommended follow-up:** Verify the category code's meaning against the dataset codebook; evaluate relevant group-level outcomes; assess the necessity and proportionality of the feature; and test a documented alternative model without it before making a governance recommendation.
