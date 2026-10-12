@@ -26,3 +26,15 @@ Inspected checking account, credit history, purpose, personal status/sex, housin
 
 ### Governance limitations
 Category imbalance is not proof of unfairness. Protected-group analysis, proxy-variable review, target validity and dataset representativeness require separate assessment.
+
+## Feature and target preparation
+
+- Target: `bad_credit`.
+- Positive class: 1 = bad credit.
+- Negative class: 0 = good credit.
+- Features: the 20 original input columns, excluding both `credit_risk` and `bad_credit`.
+- Expected feature matrix: 1,000 rows × 20 columns.
+- Expected target length: 1,000.
+- Leakage safeguard: both original and derived target columns are excluded from model inputs.
+
+This step validates the structure of the prepared inputs; it does not establish model performance or fairness.
