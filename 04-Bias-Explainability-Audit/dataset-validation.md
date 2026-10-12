@@ -56,3 +56,18 @@ The under-25 group has a higher observed false-positive rate, while the false-ne
 
 ### Limitations
 This is an exploratory analysis of a historical German dataset using a chosen age threshold. Confidence intervals quantify sampling uncertainty for individual rates; they do not establish fairness, equivalence or causation. Further validation and a direct statistical comparison would be needed before making stronger claims. Results do not establish fairness for LendWise's production system.
+
+## Direct comparison of age-group false-positive rates
+
+**Comparison:** Under 25 minus age 25 and older.
+
+- Under-25 FPR: 20.00% (4/20)
+- Age-25-and-older FPR: 13.33% (16/120)
+- Observed difference: +6.67 percentage points
+- 95% Newcombe confidence interval for the difference: −7.29 to +28.83 percentage points
+
+### Preliminary interpretation
+The observed FPR is higher for the under-25 group, but the confidence interval includes zero and is wide. This analysis does not establish a statistically distinguishable difference at the two-sided 5% level. It also does not establish fairness or equivalence.
+
+### Limitations
+The comparison is exploratory, uses a historical German credit dataset and an analyst-selected age threshold, and is based on a small under-25 test subgroup. Statistical uncertainty, label validity, group definition and external validity remain relevant limitations. These findings do not validate LendWise's production model.
