@@ -114,3 +114,15 @@ These coefficients describe associations with the model's predicted bad-credit s
 **Limitations:** This is one explanation for one record from a historical public dataset. Contributions are specific to the fitted model and preprocessing pipeline; they are not causal effects or direct changes in probability. The example does not establish LendWise production behavior, overall fairness, or legal compliance.
 
 **Recommended follow-up:** Verify the category code's meaning against the dataset codebook; evaluate relevant group-level outcomes; assess the necessity and proportionality of the feature; and test a documented alternative model without it before making a governance recommendation.
+
+### Feature-removal experiment: foreign_worker
+
+**Method:** Compared the original logistic-regression baseline with a model trained without `foreign_worker`. Both models used the same training/test split, preprocessing approach, model settings, and held-out test records.
+
+**Results:** The baseline achieved 77.5% accuracy, 63.64% precision, 58.33% recall, 60.87% F1, 14.29% FPR, and 41.67% FNR. Without `foreign_worker`, accuracy was 78.0%, precision 66.67%, recall 53.33%, F1 59.26%, FPR 11.43%, and FNR 46.67%.
+
+**Preliminary interpretation:** Removing the feature slightly increased accuracy and precision and reduced FPR, but reduced recall and increased FNR. F1 also declined. The experiment therefore shows a trade-off rather than a clear overall improvement.
+
+**Limitations:** The evaluation uses 200 historical public-dataset test records. The observed differences may be sensitive to a small number of predictions. Removing a feature does not establish that correlated proxy information has been eliminated. These results do not establish fairness, legal compliance, or production performance.
+
+**Recommended follow-up:** Compare group-level outcomes using the original `foreign_worker` categories for both models, inspect group sample sizes and uncertainty, and assess the feature's justification and potential proxy effects before making a governance recommendation.
