@@ -38,3 +38,21 @@ Category imbalance is not proof of unfairness. Protected-group analysis, proxy-v
 - Leakage safeguard: both original and derived target columns are excluded from model inputs.
 
 This step validates the structure of the prepared inputs; it does not establish model performance or fairness.
+
+## Exploratory age-group error-rate audit
+
+### Method
+Compared false-positive and false-negative rates on the held-out test set between applicants under 25 and applicants aged 25 or older. Reported 95% Wilson confidence intervals for each proportion.
+
+### Results
+
+| Group | Test records | FPR (95% CI) | FNR (95% CI) |
+|---|---:|---|---|
+| 25 and older | 161 | 13.33% (8.38%–20.56%) | 41.46% (27.76%–56.63%) |
+| Under 25 | 39 | 20.00% (8.07%–41.60%) | 42.11% (23.14%–63.72%) |
+
+### Preliminary interpretation
+The under-25 group has a higher observed false-positive rate, while the false-negative point estimates are similar. The under-25 estimates have wider confidence intervals, reflecting smaller denominators.
+
+### Limitations
+This is an exploratory analysis of a historical German dataset using a chosen age threshold. Confidence intervals quantify sampling uncertainty for individual rates; they do not establish fairness, equivalence or causation. Further validation and a direct statistical comparison would be needed before making stronger claims. Results do not establish fairness for LendWise's production system.
