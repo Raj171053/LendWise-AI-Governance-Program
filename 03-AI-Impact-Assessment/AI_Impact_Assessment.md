@@ -152,3 +152,67 @@ Any proposed acceptance of material residual risk requires a documented rational
 ### 6.4 Approval conditions
 
 AI-001 remains **Not Approved — Remediation Required** until the applicable high-priority gaps are resolved, controls are implemented and tested, required evidence is retained, and authorised independent review supports a production decision.
+
+## 7. Privacy and Individual Rights
+
+### 7.1 Scope and legal framework
+
+AI-001 may process personal and financial information to generate credit-risk scores. LendWise must confirm the applicable legal requirements based on the applicant's location, the relevant entity, the processing activity and the law in force at the time.
+
+For EU processing, assess the General Data Protection Regulation (GDPR), including transparency, data minimisation, accuracy, access and rectification rights, applicable erasure rights, and protections relating to solely automated decisions.
+
+For Indian processing, assess the Digital Personal Data Protection Act, 2023, and the Digital Personal Data Protection Rules, 2025, including their applicable commencement provisions. Confirm which provisions are in force before assigning legal deadlines or declaring a control mandatory.
+
+This section is a governance assessment, not a substitute for jurisdiction-specific legal advice.
+
+### 7.2 Rights and request-handling register
+
+| Request or right | AI-001 scenario | Required governance response |
+|---|---|---|
+| Access to personal data | An applicant asks what personal data LendWise holds or uses for credit scoring | Identify relevant data sources, retrieve the applicant's records, verify identity appropriately, and respond under the applicable legal framework |
+| Rectification | An applicant disputes an incorrect income, repayment or credit-history field | Investigate the source, correct inaccurate data where required, propagate corrections to relevant downstream systems, and reassess affected scores where appropriate |
+| Erasure | An applicant requests deletion of personal data | Assess the applicable legal basis, retention obligations and exceptions; do not automatically erase or refuse all records |
+| Explanation and transparency | An applicant asks how AI contributed to a lending outcome | Provide appropriate information about the processing, the AI's role and relevant decision factors, subject to applicable law and protection of other people's rights |
+| Challenge to lending outcome | An applicant disputes an adverse outcome | Provide a defined complaint and review route, identify the responsible decision-maker, and document the review and outcome |
+| Automated-decision safeguards | A score influences a decision that may significantly affect an individual | Determine whether the decision is solely automated in practice, including whether human review is meaningful; assess applicable legal restrictions and safeguards |
+| Data security and confidentiality | A request or investigation exposes sensitive financial information | Use appropriate identity verification, access controls, secure delivery and audit records without collecting excessive identity information |
+
+### 7.3 Human review and contestability
+
+A human reviewer must not be treated as meaningful oversight merely because a person clicks an approval button. The process should establish that the reviewer can access relevant evidence, understand the score's limitations, challenge the recommendation, override it where justified, record reasons and escalate uncertain or disputed cases.
+
+The current AI-001 documentation describes intended human review, but operational effectiveness remains unverified. This assessment therefore does not conclude that the system satisfies applicable automated-decision requirements.
+
+### 7.4 DSAR-for-AI workflow requirements
+
+The proposed workflow should include:
+
+1. Receive and categorise the request.
+2. Verify identity proportionately and securely.
+3. Determine the applicable jurisdiction, law and response deadline.
+4. Identify relevant systems, data sources, model outputs and decision records.
+5. Assess applicable rights, exemptions, retention duties and third-party considerations.
+6. Obtain review from Privacy, Legal, Credit Risk or other relevant owners as needed.
+7. Respond clearly and securely within the applicable deadline.
+8. Record the response, rationale, actions, escalations and any refusal or partial refusal.
+9. Correct relevant data or reassess an affected outcome where required.
+10. Track completion and investigate recurring issues.
+
+This is a proposed process. It must be implemented, legally reviewed and tested before it is described as operational.
+
+### 7.5 Open questions and evidence gaps
+
+- Which legal entity acts as controller or data fiduciary for each relevant processing activity?
+- Which exact personal-data fields and external sources are used by AI-001?
+- What notices explain the processing and the AI's role?
+- How are access, correction, erasure and challenge requests routed and tracked?
+- What retention rules apply to source data, scores, decisions and audit logs?
+- Can a correction trigger reassessment of an earlier score or lending outcome?
+- How is meaningful human review demonstrated in practice?
+- Which legal deadlines and exceptions apply in the EU and India at the relevant time?
+
+### 7.6 Initial conclusion
+
+Privacy and individual-rights safeguards are not yet sufficiently evidenced to support approval of AI-001. LendWise must document the applicable legal framework, implement an auditable request-handling process, validate access and correction workflows, and establish an effective route to challenge AI-influenced lending outcomes.
+
+**Approval status remains: NOT APPROVED — REMEDIATION REQUIRED.**
