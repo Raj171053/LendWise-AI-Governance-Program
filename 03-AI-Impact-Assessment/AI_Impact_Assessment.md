@@ -66,3 +66,51 @@ Priorities are preliminary and must be reviewed as evidence becomes available. A
 AI-001 could materially affect applicants' access to credit and financial opportunities. The combination of unresolved proxy-variable analysis, data-quality questions, fairness validation gaps and incomplete human-oversight evidence means that approval should remain withheld.
 
 The next assessment stage will evaluate each harm's severity, likelihood, affected population, duration and reversibility, then map proportionate mitigations and evidence requirements.
+
+## 5. Impact Severity and Likelihood Assessment
+
+### 5.1 Rating methodology
+
+**Severity**
+- **High:** Potential for substantial financial exclusion, discriminatory outcomes, or consequential harm that may be difficult to reverse.
+- **Medium:** Meaningful but potentially more limited harm, with a realistic opportunity for correction or remediation.
+- **Low:** Limited impact that is generally straightforward to correct.
+
+**Likelihood**
+- **High:** Credible exposure supported by identified design weaknesses or recurring evidence.
+- **Medium:** Plausible exposure, but important facts or control evidence remain uncertain.
+- **Low:** Limited expected exposure supported by adequate evidence of effective safeguards.
+
+These ratings are qualitative. They must not be interpreted as statistically estimated probabilities. Missing evidence must not be treated as proof that a control is ineffective or effective.
+
+### 5.2 Preliminary impact ratings
+
+| Harm ID | Potential harm | Severity | Likelihood | Overall priority | Rationale and uncertainty |
+|---|---|---|---|---|---|
+| H-01 | Unfair credit exclusion | High | Medium | High | Credit outcomes can materially affect financial opportunities. Synthetic results indicated group disparities, but actual customer-level impact is unverified. |
+| H-02 | Incorrect credit assessment | High | Medium | High | Incorrect scores may influence lending outcomes. Data quality, label reliability and representativeness remain unresolved. |
+| H-03 | Proxy discrimination | High | Medium | High | Proxy variables could produce unequal outcomes. The proxy-variable assessment has not been completed. |
+| H-04 | Inadequate human review | High | Medium | High | Human review is intended, but effective challenge, authority and operational implementation require evidence. |
+| H-05 | Insufficient explanation or contestability | Medium | Medium | Medium | Applicants may struggle to understand or challenge outcomes. Current explanation and escalation arrangements need verification. |
+| H-06 | Privacy or data misuse | High | Medium | High | Financial and personal data may be involved. Exact fields, data provenance and handling controls remain to be confirmed. |
+| H-07 | Delayed detection of harm | High | Medium | High | Without evidenced monitoring and reassessment triggers, emerging disparities or model deterioration may go undetected. |
+
+### 5.3 Interpretation and limitations
+
+The ratings above are initial, precautionary assessments based on the documented scenario and unresolved evidence gaps. They are not the results of a completed quantitative risk model.
+
+The likelihood ratings remain provisional because production exposure, control effectiveness, affected-population size and historical incident data have not been independently verified.
+
+The assessment should be updated when reliable evidence becomes available. Severity and likelihood should also be reconsidered separately for different applicant groups and for consumer versus legal-entity small-business applications.
+
+### 5.4 Risk treatment decision
+
+Until the material uncertainties are resolved, AI-001 must remain **Not Approved — Remediation Required**.
+
+Required next steps include:
+1. Complete proxy-variable and data-quality assessments.
+2. Validate fairness metrics using defined outcome labels, denominators, sample sizes and reliable reference outcomes.
+3. Verify that human reviewers can meaningfully challenge and override scores.
+4. Define applicant explanations, complaints and escalation routes.
+5. Establish monitoring, incident response and change-triggered reassessment.
+6. Document residual risks and obtain an authorised, independent approval decision before production use.
