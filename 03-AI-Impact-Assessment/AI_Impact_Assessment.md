@@ -260,3 +260,78 @@ A less risky alternative should be considered where it can achieve the legitimat
 ### 8.5 Initial conclusion
 
 The potential benefits of AI-assisted credit assessment remain unverified. Given the unresolved fairness, data-quality and oversight findings, LendWise should not proceed to production deployment at this stage. Alternative approaches and restricted testing may be evaluated only within an authorised governance process.
+
+## 9. Governance, Consultation and Approval
+
+### 9.1 Governance responsibilities
+
+| Function | Responsibility | Status |
+|---|---|---|
+| Head of Credit Risk | Accountable business owner for AI-001 risk treatment | Proposed; confirmation required |
+| AI Governance | Coordinate the impact assessment and track governance requirements | Proposed; formal assignment to be confirmed |
+| Model Risk / Data Science | Validate model performance, data quality, fairness and limitations | Required; evidence pending |
+| Privacy / Data Protection | Assess applicable privacy obligations and individual-rights safeguards | Required; review pending |
+| Legal / Compliance | Review regulatory classification, legal obligations and approval conditions | Required; review pending |
+| Technology / Security | Evidence access controls, audit logging, monitoring and technical safeguards | Required; implementation and test evidence pending |
+| Independent reviewer | Challenge the assessment and review closure evidence | Required; independence and authority to be confirmed |
+
+### 9.2 Consultation and stakeholder input
+
+Before production approval, LendWise should identify relevant internal stakeholders and determine whether consultation with affected people, representatives, specialists or other external stakeholders is appropriate.
+
+Consultation should address:
+- Whether the intended use and potential harms are adequately understood.
+- Whether customer explanations and challenge routes are usable.
+- Whether relevant applicant groups may experience disproportionate impacts.
+- Whether the proposed safeguards are practical and effective.
+- Whether additional risks or unintended consequences have been overlooked.
+
+Any consultation must use an appropriate, privacy-preserving process. This portfolio exercise does not claim that actual applicants or external stakeholders have been consulted.
+
+### 9.3 Monitoring and reassessment triggers
+
+Reassess the impact assessment when:
+- The model, training data, input features or intended purpose changes materially.
+- New fairness, accuracy or data-quality issues are identified.
+- Complaints, incidents or monitoring results indicate potential harm.
+- Human-oversight arrangements or automated actions change.
+- Applicable legal or regulatory requirements change.
+- A material limitation, new affected group or previously unrecognised harm is discovered.
+
+The responsible owner must document the trigger, impact assessment update, required approvals and resulting actions.
+
+### 9.4 Approval gates
+
+AI-001 must not receive production approval until the following conditions are evidenced:
+
+1. Material fairness and proxy-variable gaps have been addressed.
+2. Data quality, provenance and representativeness have been assessed.
+3. Human review, challenge, override and escalation controls are implemented and tested.
+4. Privacy, transparency and individual-rights requirements have been reviewed for the relevant jurisdictions.
+5. Monitoring, incident handling and reassessment arrangements are operational.
+6. Required documentation and test evidence have been reviewed independently.
+7. Residual risks have been assessed and accepted only by an authorised decision-maker where legally permissible.
+
+A document marked complete does not, by itself, satisfy these gates.
+
+### 9.5 Assessment conclusion
+
+The current assessment identifies material potential harms to applicants, particularly unfair credit exclusion, inaccurate credit assessment, proxy discrimination and ineffective human oversight.
+
+The proposed safeguards provide a basis for risk treatment, but several depend on implementation and independent evidence that have not been verified in this exercise.
+
+**Final assessment recommendation: NOT APPROVED — REMEDIATION REQUIRED.**
+
+This is a governance recommendation for the LendWise scenario. It is not a formal legal opinion, independent technical audit or certification of compliance.
+
+### 9.6 Sign-off record
+
+| Reviewer | Decision | Date | Evidence / comments |
+|---|---|---|---|
+| Head of Credit Risk | Pending | Not assigned | Business-owner review required |
+| Privacy / Data Protection | Pending | Not assigned | Jurisdiction-specific review required |
+| Legal / Compliance | Pending | Not assigned | Legal review required |
+| Independent reviewer | Pending | Not assigned | Independent evidence review required |
+| Final authorised approver | Pending | Not assigned | Production approval withheld |
+
+**Document status:** Initial assessment draft; governance review and evidence completion required.
