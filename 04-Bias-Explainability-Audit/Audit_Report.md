@@ -101,19 +101,18 @@ The association with foreign-worker status warrants review of the feature's purp
 
 ## 6. Key Findings
 
-| Finding | Evidence | Governance implication |
-|---|---|---|
-| F-01 — Baseline error profile | 25 false negatives among 60 actual bad-credit records | Assess error consequences and appropriate operating thresholds. |
-| F-02 — Age-group uncertainty | Observed FPR difference with a wide confidence interval | Do not draw definitive fairness conclusions from the current sample. |
-| F-03 — Housing-group disparities | Different observed FPR and FNR across housing categories | Investigate feature justification and potential socioeconomic proxy effects. |
-| F-04 — Feature justification | Foreign-worker status contributes to one examined prediction | Document necessity, proportionality, and applicable legal review. |
-| F-05 — Feature-removal trade-off | FPR fell while FNR rose for A201 after feature removal | Feature removal alone is not a sufficient mitigation strategy. |
-| F-06 — Limited subgroup evidence | A202 contains six test records | Obtain appropriately supported validation evidence before drawing conclusions. |
-| F-07 — Methodology limitations | Historical dataset and preprocessing choices require further review | Validate representativeness, feature semantics, and preprocessing design. |
-| F-08 — Production evidence gap | Exploratory results do not validate the deployed LendWise system | Require independent validation and implementation evidence before approval. |
+| Existing tracker reference(s) | Finding | Evidence | Governance implication |
+|---|---|---|---|
+| F-002, F-006 | Baseline error profile | 25 false negatives among 60 actual bad-credit records | Assess error consequences and appropriate operating thresholds; investigate group-level disparities. |
+| F-002, F-006 | Age-group uncertainty | Observed FPR difference with a wide confidence interval | Do not draw definitive fairness conclusions from the current sample. |
+| F-001, F-006 | Housing-group disparities | Different observed FPR and FNR across housing categories | Investigate feature justification and potential socioeconomic proxy effects. |
+| F-001 | Foreign-worker feature justification | Foreign-worker status contributes to one examined prediction | Document feature necessity, proportionality, and applicable legal review. |
+| F-001, F-002 | Feature-removal trade-off | FPR fell while FNR rose for A201 after feature removal | Feature removal alone is not a sufficient mitigation strategy. |
+| F-005, F-006 | Limited subgroup evidence | A202 contains six test records | Obtain appropriately supported validation evidence before drawing conclusions. |
+| F-003, F-005 | Methodology limitations | Historical dataset and preprocessing choices require further review | Validate label reliability, representativeness, feature semantics, and preprocessing design. |
+| F-004, F-008, F-011 | Production evidence gap | Exploratory results do not validate the deployed LendWise system | Require verified controls, independent validation, and authorized risk approval before production approval. |
 
-These are report-level finding labels for this audit and should not be treated as replacements for the existing enterprise remediation tracker IDs.
-
+**Reference note:** Tracker IDs above refer to the existing enterprise remediation tracker. They are cross-references for audit reporting, not new findings or changes to tracker status. Confirm each mapping against the tracker before final approval. No remediation is considered closed solely because it is documented in this report.
 ## 7. Recommendations and Remediation
 
 ### Priority 1 — Before any production approval
