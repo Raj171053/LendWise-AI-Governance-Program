@@ -1,0 +1,15 @@
+Control ID,Evidence Artifact Path,Evidence Type,Evidence Limitation
+XW-001,00-LendWise-Company-Brief/,Inventory and company context,Reconcile system ownership and classification against the latest inventory
+XW-002,03-AI-Impact-Assessment/AI_Impact_Assessment.md,Risk and impact assessment,Draft assessment; remediation remains open
+XW-003,04-Bias-Explainability-Audit/dataset-validation.md,Dataset validation,Public educational dataset; not production training data validation
+XW-004,07-High-Risk-Conformity/Technical_Documentation_Skeleton.md,Technical documentation template,Incomplete evidence; not a completed conformity dossier
+XW-005,02-System-Assessments/AI-001-Credit-Scoring/f-004-control-evidence-and-closure-matrix.md,Control evidence and closure matrix,Operational tests and closure evidence remain outstanding
+XW-006,04-Bias-Explainability-Audit/Model_Card.md,Model description and limitations,Educational baseline; not an approved production model
+XW-007,05-Governance-Operating-Model/Governance_Charter.md,Proposed governance roles,Formal approval and operational implementation not verified
+XW-008,04-Bias-Explainability-Audit/Audit_Report.md,Model audit report,Results apply to the educational baseline and require independent validation
+XW-009,05-Governance-Operating-Model/RACI.csv,Proposed responsibility matrix,Role assignments and approval evidence require confirmation
+XW-010,05-Governance-Operating-Model/Vendor_Assessment.xlsx,Vendor assessment template,No completed assessment of an actual vendor confirmed
+XW-011,AI-001-Remediation-Tracker-Consolidated.csv,Consolidated remediation tracker,Finding closure requires evidence and independent review
+XW-012,03-AI-Impact-Assessment/DSAR_for_AI.md,Proposed data rights request workflow,Draft only; legal applicability and operational procedure require review
+XW-013,07-High-Risk-Conformity/Gap_Assessment.csv,Conformity gap assessment,Applicability and conformity route require legal review
+XW-014,05-Governance-Operating-Model/Governance_Charter.md,Governance and review design,Review cadence and implementation evidence remain to be established
