@@ -1,0 +1,16 @@
+Activity,Executive Sponsor,AI Governance Lead,Business / AI System Owner,Model Development / Technical Owner,Risk and Compliance,Data Protection and Information Security,Independent Reviewer,Human Decision-Makers / Operators
+AI intake and registration,I,R,A,C,C,C,I,I
+Enterprise AI risk assessment,I,R,A,C,C,C,C,I
+Legal classification review,I,C,C,C,A,C,C,I
+Privacy impact review,I,C,C,C,C,A,C,I
+Fairness and model validation,I,C,C,R,C,C,A,I
+Human oversight design,I,C,A,C,C,C,C,R
+Production approval,A,R,C,C,C,C,C,I
+Remediation tracking,I,A,R,R,C,C,C,I
+Finding closure verification,I,C,C,C,C,C,A,I
+Incident escalation,I,R,A,C,C,C,I,R
+Ongoing monitoring and reporting,I,A,R,R,C,C,C,R
+Material change reassessment,I,R,A,R,C,C,C,I
+Vendor AI assessment,I,R,A,C,C,C,C,I
+Residual risk acceptance,A,R,C,C,C,C,C,I
+AI system retirement,I,R,A,R,C,C,C,I
